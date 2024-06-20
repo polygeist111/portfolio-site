@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #002171;
+    color: white;
+    /*
+    background-image: url("Media/sunset.jpg");
+    background-position: right;
+    background-repeat: no-repeat;*/
+    text-indent: 1em;
+    text-align: center;
+    /*height: 120px;
+    padding-top: 30px;
+    padding-left: 3em;*/
+
+    a {
+        text-decoration: none;
+    }
+
+    :link {
+        color: #FFFFFF;
+    }
+
+    :visited {
+        color: #FFFFFF;
+    }
+
+    :hover {
+        color: #90C7E3;
+    }
+}
+
+nav {
+    /*float: left;
+    background-color: #FFFFFF;*/
+    font-weight: bold;
+    text-align: center;
+    padding: 0px;
+
+    a {
+        text-decoration: none;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0px;
+        padding-left: 0px;
+        font-size: 1.2em;
+    }
+
+    li {
+        border-bottom: 1px solid darkblue;
+    }
+    
+    :link {
+        color: #5C7FA3;
+    }
+
+    :visited {
+        color: #344873
+    }
+    
+    :hover {
+        color: #A52A2A;
+    }
+}
+
+body {
+    background-color: #EAEAEA;
+    color: #555555;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    font-size: 75%;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    text-align: center;
+    padding: 2em;
+    /*margin-left: 190px;*/
+    background-color: #FFFFFF;
+}
+
+main {
+    padding-top: 1px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 20px;
+    display: block;
+    background-color: #FFFFFF;
+    /*margin-left: 190px;*/
+    overflow: auto;
+
+    ul {
+        list-style-image: url("Media/marker.gif");
+    }
+}
+
+/*
+section {
+    float: left;
+    width: 33%;
+    padding-left: 2em;
+    padding-right: 2em;
+
+}*/
+
+h1 {
+    margin-bottom: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    margin-top: 0;
+    letter-spacing: 0.25em;
+    /*font-size: 3em;*/
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+h2 {
+    color: #1976D2;
+    font-family: Georgia, 'Times New Roman', serif;
+    text-shadow: 1px 1px #CCCCCC;
+}
+
+h3 {
+    color: #000033;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+dt {
+    color: #002171;
+}
+
+table {
+    border: 2px solid #3399CC;
+    border-collapse: collapse;
+}
+
+td {
+    border: 2px solid #3399CC;
+    padding: 0.5em;
+    text-align: center;
+}
+
+th {
+    border: 2px solid #3399CC;
+    padding: 0.5em;
+}
+
+tr:nth-of-type(odd) {
+    background-color: #F5FAFC;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+input {
+    margin-bottom: 0.5em;
+}
+
+textarea {
+    margin-bottom: 0.5em;
+}
+
+.resort {
+    color: #1976D2;
+    font-weight: bold;
+}
+
+.text {
+    text-align: left;
+}
+
+#contact {
+    font-size: 90%;
+}
+
+#wrapper {
+    /*margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background-color: #90C7E3;
+    min-width: 960px;
+    max-width: 2048px;
+    box-shadow: 3px 3px #333333;
+    border: 1px solid #000033;*/
+    background: linear-gradient(#FFFFFF, #90C7E3);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#homehero {
+    height: 300px;
+    background-image: url("Media/coast2.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /*margin-left: 190px;*/
+}
+
+#yurthero {
+    height: 300px;
+    background-image: url("Media/yurt.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /*margin-left: 190px;*/
+}
+
+#trailhero {
+    height: 300px;
+    background-image: url("Media/trail.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /*margin-left: 190px;*/
+}
+
+@media only screen and (min-width: 600px) {
+    nav {
+        ul {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        li {
+            border-bottom: none;
+        }
+    }
+
+    section {
+        margin-left: 2em;
+        margin-right: 2em;
+        flex: 1;
+    }
+
+    form {
+        width: 60%;
+        max-width: 30em;
+    }
+
+    .flow {
+        display: flex;
+        flex-direction: row;
+    }
+
+    @supports (display: grid) {
+        form {
+            display: grid;
+            gap: 1em;
+            grid-template-columns: 6em 1fr;
+        }
+
+        input[type=submit] {
+            grid-column: 2 / 3;
+            width: 9em;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #wrapper {
+        margin: auto;
+        width: 80%;
+        border: 1px solid darkblue;
+        box-shadow: 3px 3px darkblue;
+    }
+
+    nav {
+        text-align: left;
+        padding-left: 1em;
+    }
+
+    @supports (display: grid) {
+        
+        header {
+            grid-row: 1 / 2;
+            grid-column: 1 / 3;
+            vertical-align: center;
+        }
+        
+        nav {
+            grid-row: 2 / 5;
+            grid-column: 1 / 2;
+
+            ul {
+                flex-direction: column;
+                padding-top: 1em;
+            }
+        }
+
+        main {
+            grid-row: 3 / 4;
+            grid-column: 2 / 3;
+        }
+
+        footer {
+            grid-row: 4 / 5;
+            grid-column: 2 / 3;
+        }
+
+        .hero {
+            grid-area: hero;
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+            max-height: 100%;
+
+        }
+
+        #wrapper {
+            display: grid;
+            grid-template-columns: 180px auto;
+            grid-template-rows: auto auto auto auto
+            /*I tried using fr units, but it caused weird issues with hero image height and made the wrapper way too tall, auto is much more stable*/
+        }
+
+    }
+}

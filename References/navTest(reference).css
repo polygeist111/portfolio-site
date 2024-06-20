@@ -1,0 +1,78 @@
+/* essential to add this as there's a default 8px margin */
+
+body {
+    margin: 0;
+  }
+  
+  
+  /* this is also essential to avoid a world of width-based pain */
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  /* Just making things pretty here */
+  
+  nav {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: purple;
+    color: white;
+  }
+  
+  
+  /*the menu button is basically a hidden check box, we use label to style it as a button */
+  
+  .menubutton>input {
+    display: none;
+  }
+  
+  
+  /*these toggles the display of the menu button, it works because the label after the input element */
+  
+  .menubutton>input:checked+label .not-active {
+    display: none;
+  }
+  
+  .menubutton>input:not(:checked)+label .active {
+    display: none;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .container-left {
+    background-color: plum;
+    height: 50vh;
+    /*width: 0px;*/
+    text-indent: -100px;
+    width: 0px;
+    transition: width 300ms;
+    /*transition-duration: 300ms;
+    transition-property: all;*/
+  }
+  
+  
+  /* this is the bit that styles the width of the sidebar when the checkbox is checked. */
+  
+  body:has(.menubutton > input:checked) .container-left {
+    text-indent: 0px;
+    width: 10rem;
+    padding: 0.5rem 0.5rem;
+    /*border: 1px solid transparent;*/
+  }
+  
+  
+  /* just style the right box for visibility */
+  
+  .container-right {
+    border: 1px solid lightgray;
+    height: 50vh;
+    flex-grow: 1;
+    padding: 0.5rem 0.5rem;
+  }
