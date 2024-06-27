@@ -15,6 +15,7 @@ body {
 
 header {
     position: sticky;
+    z-index: 99;
     top: 0;
 
     grid-row: 1 / 2;
@@ -89,27 +90,15 @@ nav {
         text-decoration: none;
     }
 
-    :link {
-        color: #222a30;
-    }
-
-    :visited {
-        color: #8240c4;
-    }
-
-    a:hover {
-        color: #ed215b;
-    }
-
 } 
 
 #navObjects {
+    position: fixed;
     font-weight: bold;
     font-size: 14pt;
     padding-top: 1.5em;
     overflow-x: hidden;
-    overflow-y: hidden;
-    
+    overflow-y: hidden;    
     li {
         padding-top: .4em;
         padding-bottom: .4em;
@@ -121,6 +110,18 @@ nav {
         width: 100%;
         max-height: 1px;
         border-bottom: 1px solid #222a30;
+    }
+
+    :link {
+        color: #222a30;
+    }
+
+    :visited {
+        color: #8240c4;
+    }
+
+    a:hover {
+        color: #ed215b;
     }
 }
 
@@ -148,12 +149,12 @@ footer {
 }
 
 #copyContent {
+    position: fixed;
+    bottom: 0vh;
+    max-width: 15vw;
     font-size: 10pt;
     justify-self: right;
-    width: 0px;
     transition: width 300ms;
-    grid-row: 3 / 5;
-    grid-column: 4 / 5;
     text-align: center;
     align-self:self-end;
     padding-bottom: 1em;
@@ -161,7 +162,8 @@ footer {
 }
 
 .menubutton {
-    position: sticky;
+    position: fixed;
+    z-index: 99;
     top: 0;
 
     display: flex;
