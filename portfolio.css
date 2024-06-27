@@ -15,6 +15,7 @@ body {
 
 header {
     position: sticky;
+    top: 0;
     z-index: 99;
 
     grid-row: 1 / 2;
@@ -39,6 +40,9 @@ header {
     }
 
     h1 {
+        padding-left: .5em;
+        padding-right: .5em;
+        transform: translateX(-.5em);
         vertical-align: center;
         align-self: center;
         /*margin: 0;
