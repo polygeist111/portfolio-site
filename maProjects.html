@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/bb07e2e724.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="portfolio.css">
+    <link rel="icon" type="image/svg" href="Media/polygeistTriad.svg">
 
 </head>
 
@@ -56,6 +57,32 @@
         </nav>
 
         <main>
+            <div class="projectWrapper">
+                <div id="projectMedia" class="projectMedia">
+                    <video class="projectMedia" controls="controls" poster="Media/clawStill.jpg" width="100%" height="100%">
+                        <source src="Media/Cecelic_Wood_AugmentedFashion-WearableComputingVideo.mp4" type="video/mp4">
+                        <a href="Media/Cecelic_Wood_AugmentedFashion-WearableComputingVideo.mp4">Claw Gauntlet</a> (.mp4)
+                    </video>
+                </div>
+                <h2>Claw Gauntlet - 2024</h2>
+                <p>Made for ASU's AME 240 course with classmate Ariana Cecelic, this gauntlet represents an end-to-end wearable technology development process. Every single fabricated component is custom-built, from the claw tubes to the electronics housings. The glove is hand-sewn, and the hard parts were all designed and printed in my apartment.
+                    A Hall Effect sensor detects certain gestures, indicating to the system to either retract or extend the claws, using a spooling motor to retract and spring force to extend. This project is programmed in Arduino and runs on an Adafruit Trinket M0.
+                </p>
+            </div>
+
+            <div class="projectWrapper">
+                <div id="projectMedia" class="projectMedia">
+                    <video class="projectMedia" controls="controls" poster="Media/thereminStill.jpg" width="100%" height="100%">
+                        <source src="Media/thereminDemo.mp4" type="video/mp4">
+                        <a href="Media/thereminDemo.mp4">Claw Gauntlet</a> (.mp4)
+                    </video>
+                </div>
+                <h2>Scrap Theremin - 2024</h2>
+                <p>Made for ASU's AME 112 course with classmate Benjamin Chatfield, the goal for my portion of this project was to build a modified theremin using, in essence, scrap materials. Powered by hte cv.jit library for MaxMSP, computer vision techniques are applied to identify the position of objects between the camera and the blue background.
+                    Any objects outside that area are ignored, as are the white post (which exists for user reference for the centerline), as well as blue and black materials. The position of an object within the focus area determines tone (from A4 to A6 based on Y position) and volume (from 1x to 3x, outside to centerline on the X axis).
+                    This output can then be processed by Benjamin's (or anyone else's) effects filters, for a more refined result. The only material purchased for the theremin was the ring light, all other components were recycled from prior projects.
+                </p>
+            </div>
 
             <!--
             <div id="contact">
