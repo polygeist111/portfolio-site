@@ -3,9 +3,12 @@ let lantern;
 
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+window.addEventListener("resize", resizeLanternRenderer);
 
 const lanternShell = document.getElementById('lanternModelProj');
-const lanternBounds = lanternShell.getBoundingClientRect();
+let lanternBounds = lanternShell.getBoundingClientRect();
 const scene = new THREE.Scene();
 const backgroundGray = new THREE.Color(0x222a30);
 //const backgroundGray = new THREE.Color(0x222000);
@@ -23,7 +26,9 @@ renderer.setAnimationLoop( animate );
 
 //document.body.appendChild( renderer.domElement );
 lanternShell.appendChild(renderer.domElement);
-
+//const controls = new OrbitControls( camera, renderer.domElement );
+//controls.enablePan = false;
+//controls.update();
 /*const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 const cube = new THREE.Mesh( geometry, material );
@@ -47,9 +52,10 @@ loader.load( 'Media/lantern.glb', function ( gltf ) {
     lantern.translateZ(-300); 
     lantern.translateY(10);
     //lantern.scale.set(3, 3, 3); //for perspective camera
-    lantern.scale.set(130, 130, 130); //for ortho camera
+    lantern.scale.set(120, 120, 120); //for ortho camera
     lantern.rotateZ(1.13446);
-
+    //controls.target = getCenterPoint(lantern)
+    //controls.update();
 	scene.add( lantern );
 
 },
@@ -76,4 +82,19 @@ function animate() {
 
 	renderer.render( scene, camera );
 
+}
+
+function resizeLanternRenderer() {
+    lanternBounds = lanternShell.getBoundingClientRect();
+    renderer.setSize( lanternBounds.width, lanternBounds.height);
+}
+
+function getCenterPoint(mesh) {
+    //from https://stackoverflow.com/questions/38305408/threejs-get-center-of-object
+    var geometry = mesh.geometry;
+    geometry.computeBoundingBox();
+    var center = new THREE.Vector3();
+    geometry.boundingBox.getCenter( center );
+    mesh.localToWorld( center );
+    return center;
 }

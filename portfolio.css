@@ -112,25 +112,64 @@ nav {
         padding-left: 1.5em;
         padding-right: 2em;
     }
-    
+
     .navSpacer {
-        width: 100%;
+        position: relative;
+        width: 90%;
+        left: 5%;
         max-height: 1px;
         border-bottom: 1px solid #222a30;
     }
-
+    
     :link {
         color: #222a30;
     }
-
+    
     :visited {
         color: #8240c4;
     }
-
+    
     a:hover {
         color: #ed215b;
     }
 }
+
+.bottomNav {
+    position: fixed;
+    bottom: 0vh;
+    max-width: 15vw;
+    transition: width 300ms;
+    max-height: 30vh;
+    font-size: 10pt;
+    justify-self: right;
+    text-align: center;
+    align-self:self-end;
+    padding-bottom: 1em;
+    overflow-x: hidden;
+    margin-left: .5em;
+    margin-right: .5em;
+    /*
+    */
+}
+
+#socialLinks {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+}
+
+.socialIcon {
+    width: 50%;
+}
+
+.socialIcon:hover {
+    filter: invert(26%) sepia(50%) saturate(6465%) hue-rotate(330deg) brightness(94%) contrast(97%) !important;
+}
+
+
+
 
 main {
     grid-row: 3 / 4;
@@ -406,8 +445,9 @@ body:has(.menubutton > input:checked) #navText {
 }
 
 #copyContent {
+    /*
     position: fixed;
-    bottom: 0vh;
+    bottom: 0vh;*/
     max-width: 15vw;
     font-size: 10pt;
     justify-self: right;
@@ -464,6 +504,10 @@ body:has(.menubutton > input:checked) nav {
 }
 
 body:has(.menubutton > input:checked) #copyContent {
+    width: 100%;
+}
+
+body:has(.menubutton > input:checked) .bottomNav {
     width: 100%;
 }
 
