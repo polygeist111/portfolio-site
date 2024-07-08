@@ -5,10 +5,12 @@
     <title>Tucker Wood::Computer Science Projects</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View Tucker Wood's Computer Science projects, including Archetyp Wine's catalog generator and a custom LEGO mosaic generator.">
+
+    <link rel="icon" type="image/svg" href="Media/polygeist.svg">
     <script src="https://kit.fontawesome.com/bb07e2e724.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="portfolio.css">
-    <link rel="icon" type="image/svg" href="Media/polygeist.svg">
 
 </head>
 
@@ -73,37 +75,37 @@
 
         <main>
             <div class="projectWrapper">
-                <div id="projectMedia" class="projectMedia">
+                <div id="catalogProj" class="projectMedia">
                     <video controls="controls" poster="Media/clawStill.jpg" width="100%" height="100%">
                         <source src="Media/Cecelic_Wood_AugmentedFashion-WearableComputingVideo.mp4" type="video/mp4">
                         <a href="Media/Cecelic_Wood_AugmentedFashion-WearableComputingVideo.mp4">Claw Gauntlet</a> (.mp4)
                     </video>
                 </div>
-                <h2>generic header</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <h2>Archetyp Catalog Generator 2023-2024</h2>
+                <p>Made for <a href="https://www.archetyp.com/" target="_blank">Archetyp Alpine Wines</a>, this program dynamically generates a downloadable vector PDF of Archetyp's wine offerings and prices for trade parters, as well as general information and winemaker profiles, with data updated live.
+                If a wine sells out, the generator will omit it. If a new wine is pushed to the online store, the generator will include it immediately. This project is built with p5.js, as well as <a href="https://github.com/zenozeng" target="_blank">Zeno Zeng's</a> <a href="https://github.com/zenozeng/p5.js-svg" target="_blank">p5.js-svg</a> and <a href="https://github.com/zenozeng/p5.js-pdf" target="_blank">p5.js-pdf</a> tools.
+                Wine data is pulled from Commerce7's REST APIs, and price data is accessed with Google Auth. For the purposes of this demo, Google Auth has been removed and a snapshot of price data from 7/24 has been taken, so that non-employees can still test the system. This is an ongoing project, and future updates to the full program will also occassionally be ported to this demo. <br><br><i>Included with permission from Archetyp Alpine Wines</i></p>
             </div>
             
             <div class="projectWrapper">
-                <div id="projectMedia" class="projectMedia">
+                <div id="mosaicProj" class="projectMedia">
+                    <!--
                     <video controls="controls" poster="Media/clawStill.jpg" width="100%" height="100%">
                         <source src="Media/Cecelic_Wood_AugmentedFashion-WearableComputingVideo.mp4" type="video/mp4">
                         <a href="Media/Cecelic_Wood_AugmentedFashion-WearableComputingVideo.mp4">Claw Gauntlet</a> (.mp4)
-                    </video>
+                    </video>-->
+
+
+                    <!--<script src="MosaicGenerator/p5.min.js"></script>
+                    <script src="MosaicGenerator/sketch.js"></script>-->
+                    <iframe src="MosaicGenerator/mosaic.html" title="Mosaic Generator"></iframe>
                 </div>
-                <h2>generic header</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <h2>Mosaic Generator for LEGO® Bricks - 2022</h2>
+                <p>Forgive the long-winded title, it's a matter of compliance. This program, made in p5.js and purely as a personal project, is a tool to help in creating mosaics with LEGO® pieces. By uploading your image, panel dimensions (think of it like an aspect ratio), title, and colors (this demo has preset colors, for ease of use),
+                    the program will subdivide the image into pieces, and for each piece identify its nearest matching color among available LEGO® parts. It will then assemble these into all of the graphics needed to create an instruction booklet for your mosaic.
+                    This project is a work in progress, and more advanced (but not web-compatible) versions exist that I plan to port over. Come back soon for a more complete version! <br><br><i>LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site</i></p>
             </div>
 
-            <div class="projectWrapper">
-                <div class="projectMedia">
-                    <video class="projectMedia" controls="controls" poster="Media/clawStill.jpg" width="100%" height="100%">
-                        <source src="Media/Cecelic_Wood_AugmentedFashion-WearableComputingVideo.mp4" type="video/mp4">
-                        <a href="Media/Cecelic_Wood_AugmentedFashion-WearableComputingVideo.mp4">Claw Gauntlet</a> (.mp4)
-                    </video>
-                </div>
-                <h2>generic header</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
             <!--
             <div id="contact">
                 <span class="resort">Pacific Trails Resort</span> <br>
@@ -119,6 +121,7 @@
             <!--<br>
             Copyright &copy; 2024 Tucker Wood <br>
             <a href="mailto:twood@archetyp.com">twood@archetyp.com</a>-->
+            <a href="contact.html">Contact Me</a>
         </footer>
 
     </div>

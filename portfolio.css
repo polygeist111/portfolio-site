@@ -146,10 +146,12 @@ nav {
     align-self:self-end;
     padding-bottom: 1em;
     overflow-x: hidden;
+    /*
     margin-left: .5em;
     margin-right: .5em;
-    /*
     */
+    padding-left: .5em;
+    padding-right: .5em;
 }
 
 #socialLinks {
@@ -183,7 +185,10 @@ main {
 footer {
     grid-row: 4 / 5;
     grid-column: 2 / 3;
+    display: flex;
     text-align: center;
+    align-items: center;
+    justify-self: center;
 
 }
 
@@ -259,7 +264,7 @@ select {
 
 #wrapper {
     display: grid;
-    grid-template-columns: 20% 60% 5% 15%;
+    grid-template-columns: 20vw 60vw 5vw 15vw;
     /*grid-template-rows: auto auto auto auto;*/
     grid-template-rows: 10vh 5vh max-content 5vh;
     /*background: conic-gradient(from 45deg, #443dff, rgba(237, 33, 91, 0));*/
@@ -308,10 +313,18 @@ select {
 
 
 #navText {
+    color: #dddbff;
+    font-size: 16pt;
+    /*align-self: center;*/
+    padding: 0;
+    margin: 0;
+    transform: translateY(-.18vh);
     transition: all 300ms;
+    /*CODE: use logical styles to standardize x axis movement*/
 }
 body:has(.menubutton > input:checked) #navText {
-    transform: translateX(-11vw);
+    transform: translateX(-15vw) translateX(40px) translate(1em);
+    
 }
 
 @keyframes endlessSpin {
@@ -456,8 +469,8 @@ body:has(.menubutton > input:checked) #navText {
     align-self:self-end;
     padding-bottom: 1em;
     overflow-x: hidden;
-    margin-left: .5em;
-    margin-right: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
 }
 
 .menubutton {
@@ -476,15 +489,6 @@ body:has(.menubutton > input:checked) #navText {
     justify-self: end;
     text-align: right;
     padding-top: 1.5em;
-    
-    p {
-        color: #dddbff;
-        font-size: 16pt;
-        align-self: center;
-        padding: 0;
-        margin: 0;
-        transform: translateY(-.18vh);
-    }
 }
 
 .menubutton>input {
@@ -704,6 +708,12 @@ body:has(.menubutton > input:checked) .bottomNav {
         margin: 0;
         padding: 0;
         color:#443dff;
+    }
+    a {
+        color:#dddbff;
+    }
+    a:hover {
+        color:#ed215b;
     }
 }
 
