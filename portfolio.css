@@ -194,10 +194,6 @@ td {
     color: #dddbff;
 }
 
-#formHolder {
-    /*transform: scale(calc(100% * (100vw / 500px)));*/
-}
-
 form {
     display: flex;
     flex-direction: column;
@@ -663,6 +659,7 @@ body:has(.menubutton > input:checked) #copyContent {
     h2 {
         margin: 0;
         padding: 0;
+        color:#443dff;
     }
 }
 

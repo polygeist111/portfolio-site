@@ -11,8 +11,8 @@ const backgroundGray = new THREE.Color(0x222a30);
 //const backgroundGray = new THREE.Color(0x222000);
 
 scene.background = backgroundGray;
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-//const camera = new THREE.OrthographicCamera( lanternBounds.width * -.5, lanternBounds.width * .5, lanternBounds.height * -.5, lanternBounds.height * .5, 0.1, 1000 );
+//const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.OrthographicCamera( lanternBounds.width * -.5, lanternBounds.width * .5, lanternBounds.height * -.5, lanternBounds.height * .5, 0.1, 1000000);
 
 //const camera = new THREE.PerspectiveCamera( 75, lanternBounds.width / lanternBounds.height, 0.1, 1000 );
 
@@ -41,10 +41,14 @@ loader.load( 'Media/lantern.glb', function ( gltf ) {
     //lantern = gltf.scene;
     let lanternModel = gltf.scene.children[0].geometry;
 
-    const lanternMat = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+    const lanternMat = new THREE.MeshBasicMaterial( { color: 0xed215b } );
     lantern = new THREE.Mesh(lanternModel, lanternMat);
-    lantern.rotateZ(4.27606);
-    lantern.scale.set(3, 3, 3);
+    //lantern.rotateZ(4.27606); //for perspective
+    lantern.translateZ(-300); 
+    lantern.translateY(10);
+    //lantern.scale.set(3, 3, 3); //for perspective camera
+    lantern.scale.set(130, 130, 130); //for ortho camera
+    lantern.rotateZ(1.13446);
 
 	scene.add( lantern );
 
