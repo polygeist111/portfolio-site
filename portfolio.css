@@ -695,6 +695,10 @@ body:has(.menubutton > input:checked) .bottomNav {
 
 }
 
+.projectSpacer {
+    transform: translateY(10pt);
+}
+
 .projectWrapper {
     display: inline-block;
     color:#dddbff;
@@ -728,159 +732,21 @@ body:has(.menubutton > input:checked) .bottomNav {
     margin-bottom: 1em;
 }
 
-
-
-
-
-
-@supports not (display: grid) {
-    /*Nav bar code heavily informed by https://stackoverflow.com/questions/74877881/collapsible-side-menu-with-css-flexbox*/
-    element {
-        overflow-x: hidden;
-    }
-
-    body {
-        margin: 0;
-        /*background-color: #222a30;*/
-        background-color: red; /*CODE: remove for final*/
-        font-family: Arial, Helvetica, sans-serif;
-    }
-        
-    * {
-        box-sizing: border-box;
-    }
-
-    header {
-        padding-left: 20%;
-
-        a {
-            text-decoration: none;
-        }
-
-        :link {
-            color: #dddbff;
-        }
-
-        :visited {
-            color: #dddbff;
-        }
-
-        :hover {
-            color: #ed215b;
-        }
-    }
-    
-    nav {
-        display: flex;
-        flex-flow: row-reverse;
+.projectMediaLarge {
+    width: 60vw;
+    min-width: 60vw;
+    height: 60vw;
+    margin-bottom: 1em;
+    iframe {
         width: 100%;
-        gap: 1rem;
-        color: black;
-        ul {
-            list-style-type: none;
-        }
-        a {
-            text-decoration: none;
-        }
-
-        :link {
-            color: #dddbff;
-        }
-
-        :visited {
-            color: #dddbff;
-        }
-
-        a:hover {
-            color: #ed215b;
-        }
-    } 
-
-    main {
-        height: fit-content;
-    }
-
-    .menubutton {
-        offset-anchor: right center;
-        padding-right: 1em;
-        color: white;
-        justify-self: end;
-        text-align: right;
-        align-items: center;
-    }
-
-    #menuTextLabel {
-        display: inline-block;    
-        padding-right: .6em;
-        align-self: center;
-    }
-
-    .menubutton>input {
-        display: none;
-    }
-    
-    .menubutton>input:checked+label .not-active {
-        display: none;
-    }
-    
-    .menubutton>input:not(:checked)+label .active {
-        display: none;
-    }
-    
-    .container {
-        display: flex;
-        width: 100%;
-        height: fit-content;
-    }
-    
-    .container-left {
-        border: 1px solid lightgray;
-        height: fit-content;
-        flex-grow: 1;
-        padding: 0.5rem 0.5rem;
-    }
-
-    .container-right {
-        background-color: plum;
-        height: fit-content;
-        width: 0px;
-        transition: width 300ms;
-    }
-        
-    body:has(.menubutton > input:checked) .container-right {
-        width: 15%;
-        padding: 0.5rem 0.5rem;
-    }
-
-    .nav-contents {
-        /*display: none;*/
-        /*text-indent: 10rem;
-        transition: all 300ms;*/
-        animation-duration: 300ms;
-        animation-timing-function: linear;
-        animation-direction: reverse;
-        animation-name: navOpen;
-    }
-
-    body:has(.menubutton > input:checked) .nav-contents {
-        /*display: block;*/
-        /*text-indent: 0px;*/
-        animation: 1s forward slideIn;
-    }
-
-
-    #topWrapper {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        white-space: nowrap;
-        align-items: center;
-        justify-content: space-between;
-
-    }
-    
-    @keyframes slideIn {
-        0% {transform: translate(50vw);}
-        100% {transform: translate(0vw);}
+        height: 100%;
     }
 }
+
+
+
+
+
+/*
+@supports not (display: grid) {
+}*/
