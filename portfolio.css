@@ -315,8 +315,12 @@ select {
     margin: 0;
     transform: translateY(-.18vh);
     transition: all 300ms;
+    /*
+    overflow: hidden;
+    white-space: nowrap;
+
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: hidden;*/
     /*CODE: use logical styles to standardize x axis movement*/
 }
 body:has(.menubutton > input:checked) #navText {
@@ -486,7 +490,11 @@ body:has(.menubutton > input:checked) #navText {
     justify-self: end;
     text-align: right;
     padding-top: 1.5em;
-    overflow-y: hidden;
+
+    /*
+    overflow: hidden;
+    white-space: nowrap;
+    */
 }
 
 .menubutton>input {
