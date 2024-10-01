@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>Tucker Wood::Computer Science Projects</title>
+    <title>Thalia Wood::Computer Science Projects</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="View Tucker Wood's Computer Science projects, including Archetyp Wine's catalog generator and a custom LEGO mosaic generator.">
+    <meta name="description" content="View Thalia Wood's Computer Science projects, including Archetyp Wine's catalog generator and a custom LEGO mosaic generator.">
 
     <link rel="icon" type="image/svg" href="Media/polygeist.svg">
     <script src="https://kit.fontawesome.com/bb07e2e724.js" crossorigin="anonymous"></script>
@@ -19,7 +19,7 @@
 <body>
     <div id="wrapper">
         <header>
-            <h1><a href="index.html">Tucker Wood</a></h1>
+            <h1><a href="index.html">Thalia Wood</a></h1>
         </header>
         
         <div class='menubutton'>
@@ -59,15 +59,15 @@
             <div class="bottomNav">
                 <div id="socialLinks">
                     <!--These icons from https://www.svgrepo.com-->
-                    <a href="https://github.com/polygeist111" target="_blank"><img class="socialIcon" src="Media/github.svg" alt="Image Link to Tucker's GitHub profile"></a>
-                    <a href="https://www.linkedin.com/in/tucker-wood-56803a1a0/" target="_blank"><img class="socialIcon" src="Media/linkedin.svg" alt="Image Link to Tucker's LinkedIn profile"></a>
-                    <a href="https://www.instagram.com/polygeist111/" target="_blank"><img class="socialIcon" src="Media/Instagram.svg" alt="Image Link to Tucker's Instagram profile"></a>
-                    <a href="contact.html"><img class="socialIcon" src="Media/message.svg" alt="Image Link to Tucker's contact form"></a>
+                    <a href="https://github.com/polygeist111" target="_blank"><img class="socialIcon" src="Media/github.svg" alt="Image Link to Thalia's GitHub profile"></a>
+                    <a href="https://www.linkedin.com/in/tucker-wood-56803a1a0/" target="_blank"><img class="socialIcon" src="Media/linkedin.svg" alt="Image Link to Thalia's LinkedIn profile"></a>
+                    <a href="https://www.instagram.com/polygeist111/" target="_blank"><img class="socialIcon" src="Media/Instagram.svg" alt="Image Link to Thalia's Instagram profile"></a>
                     <!--
+                        <a href="contact.html"><img class="socialIcon" src="Media/message.svg" alt="Image Link to Thalia's contact form"></a>
                 -->
                 </div>
                 <div id="copyContent"> 
-                    Copyright &copy; 2024 Tucker Wood <br>
+                    Copyright &copy; 2024 Thalia Wood <br>
                     <a href="mailto:twood@archetyp.com">twood@archetyp.com</a>
                 </div>
             </div>
@@ -79,9 +79,9 @@
                 <h2>Archetyp Catalog Generator 2023-2024</h2>
                 <p>Made for <a href="https://www.archetyp.com/" target="_blank">Archetyp Alpine Wines</a>, this program dynamically generates a downloadable vector PDF of Archetyp's wine offerings and prices for trade parters, as well as general information and winemaker profiles, with data updated live.
                     If a wine sells out, the generator will omit it. If a new wine is pushed to the online store, the generator will include it immediately. This project is built with p5.js, as well as <a href="https://github.com/zenozeng" target="_blank">Zeno Zeng's</a> <a href="https://github.com/zenozeng/p5.js-svg" target="_blank">p5.js-svg</a> and <a href="https://github.com/zenozeng/p5.js-pdf" target="_blank">p5.js-pdf</a> tools.
-                    Wine data is pulled from Commerce7's REST APIs, and price data is accessed with Google Auth. For the purposes of this demo, Google Auth has been removed and a snapshot of price data from 7/24 has been taken, so that non-employees can still test the system. This is an ongoing project, and future updates to the full program will also occassionally be ported to this demo. 
+                    Wine data is pulled from Commerce7's REST APIs, and price data is accessed with Google Auth. I hope to include a code demo of the project here soon, but for now here is a real sample output of Archetyp's wholesale catalog as of 09/2024.<!--For the purposes of this demo, Google Auth has been removed and a snapshot of price data from 7/24 has been taken, so that non-employees can still test the system. This is an ongoing project, and future updates to the full program will also occassionally be ported to this demo.--> 
                     <br><br><i>Included with permission from Archetyp Alpine Wines</i>
-                    <br><i>(I didn't have time to remove google auth, but I promise it's a real project behind the security wall)</i>
+                    <!--<br><i>(I didn't have time to remove google auth, but I promise it's a real project behind the security wall)</i>-->
                 </p>
                 <div id="catalogProj" class="projectMediaLarge">
                     <!--
@@ -90,15 +90,16 @@
                         <a href="Media/Cecelic_Wood_AugmentedFashion-WearableComputingVideo.mp4">Claw Gauntlet</a> (.mp4)
                     </video>
                     -->
-                    <iframe src="CatalogGenerator/index.html" title="Catalog Generator"></iframe>
+                    <!--<iframe src="CatalogGenerator/index.html" title="Catalog Generator"></iframe>-->
+                    <embed src="Media\SummerCatalog.pdf" width="842px" height="1110px" />
                 </div>
             </div>
             
             <div class="projectWrapper">
-                <h2>Mosaic Generator for LEGO® Bricks - 2022</h2>
-                <p>Forgive the long-winded title, it's a matter of compliance. This program, made in p5.js and purely as a personal project, is a tool to help in creating mosaics with LEGO® pieces. By uploading your image, panel dimensions (think of it like an aspect ratio), title, and colors (this demo has preset colors, for ease of use),
-                    the program will subdivide the image into pieces, and for each piece identify its nearest matching color among available LEGO® parts. It will then assemble these into all of the graphics needed to create an instruction booklet for your mosaic.
-                    This project is a work in progress, and more advanced (but not web-compatible) versions exist that I plan to port over. Come back soon for a more complete version! <br><br><i>LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site</i></p>
+                <h2>Mosaic Generator using LEGO® Bricks - 2022</h2>
+                <p>Forgive the long-winded title, it's a matter of compliance. This program, made in p5.js using <a href="https://github.com/zenozeng" target="_blank">Zeno Zeng's</a> <a href="https://github.com/zenozeng/p5.js-svg" target="_blank">p5.js-svg</a> tool and purely as a personal project, is a tool to help in creating mosaics with LEGO® pieces. By uploading your image, panel dimensions (think of it like an aspect ratio), title, and colors (this demo has preset colors, for ease of use),
+                    the program will subdivide the image into pieces, and for each piece identify its nearest matching color among available LEGO® parts. It will then assemble these into all of the graphics needed to create an instruction booklet for your mosaic using the Studio modeling tool.
+                    This project is a work in progress, and currently only supports 3x2 aspect ratio mosaics. The eventual hope is for the program to produce complete mosaic instruction booklets, not just graphics inserts. Come back soon to see more features and broader support!<br><br><i>LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site or project</i></p>
                     <div id="mosaicProj" class="projectMediaLarge">
                         <!--
                         <video controls="controls" poster="Media/clawStill.jpg" width="100%" height="100%">
@@ -110,7 +111,7 @@
     
                         <!--<script src="MosaicGenerator/p5.min.js"></script>
                         <script src="MosaicGenerator/sketch.js"></script>-->
-                        <iframe src="MosaicGenerator/mosaic.html" title="Mosaic Generator"></iframe>
+                        <iframe src="MosaicGenerator/index.html" title="Mosaic Generator"></iframe>
                     </div>
             </div>
 
@@ -127,7 +128,7 @@
 
         <footer>
             <!--<br>
-            Copyright &copy; 2024 Tucker Wood <br>
+            Copyright &copy; 2024 Thalia Wood <br>
             <a href="mailto:twood@archetyp.com">twood@archetyp.com</a>-->
         </footer>
 

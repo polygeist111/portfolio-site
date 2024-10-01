@@ -1,8 +1,28 @@
 html, body {
-  margin: 0;
+  margin: 10px;
   padding: 0;
+  background-color: #222a30;
+  color: #dddbff;
+  font-family: Arial, Helvetica, sans-serif;
 }
+/*
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+}
+  in future version, make inputs relatively positioned, then center generator
+*/
 
 canvas {
   display: block;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#defaultCanvas0 {
+  border:1px solid #dddbff;
 }

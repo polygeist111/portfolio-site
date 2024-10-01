@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SVG Mosaic Generator</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+
+    <!--<script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>!-->
+    <!--<script src="/socket.io/socket.io.js"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const socket = io();
+        //console.log("I just connected with id: " + io.id);
+      });
+    </script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <script src="https://unpkg.com/p5.js-svg@1.5.1"></script>
+    <!--<script>
+      p5.prototype.createCanvas = function(w, h, renderer) {
+      //p5._validateParameters('createCanvas', arguments);
+      //optional: renderer, otherwise defaults to p2d
+      const r = renderer;
+      let c;
+
+      if (!this._defaultGraphicsCreated) {
+        c = document.createElement('canvas');
+        let i = 0;  
+        while (document.getElementById(`defaultCanvas${i}`)) {
+          i++;
+        }
+        defaultId = `defaultCanvas${i}`;
+        c.id = defaultId;
+        //c.classList.add(defaultClass);
+        } else {
+          // resize the default canvas if new one is created
+          c = this.canvas;
+        }
+
+        // set to invisible if still in setup (to prevent flashing with manipulate)
+        if (!this._setupDone) {
+          c.dataset.hidden = true; // tag to show later
+          c.style.visibility = 'hidden';
+        }
+
+        if (this._userNode) {
+          // user input node case
+          this._userNode.appendChild(c);
+        } else {
+          document.body.appendChild(c);
+        }
+
+        // Init our graphics renderer
+        if (!this._defaultGraphicsCreated) {
+          this._setProperty('_renderer', new p5.Renderer2D(c, this, true));
+          this._defaultGraphicsCreated = true;
+          this._elements.push(this._renderer);
+        }
+
+        this._renderer.resize(w, h);
+        this._renderer._applyDefaults();
+        return this._renderer;
+      };  
+    </script>!-->
+    <script src="sketch.js"></script>
+  </head>
+
+  <body>
+    <!--<script type="text/javascript" src="./xebra-state.js"></script>!-->
+    <!--<h3>Please ensure you're using Firefox, Chrome won't download output files correctly</h3>!-->
+  </body>
+</html>
