@@ -1,0 +1,5 @@
+Fix nav bar footer
+
+Update site content
+
+Ground-up rebuild!
